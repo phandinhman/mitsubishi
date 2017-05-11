@@ -20418,10 +20418,6 @@ textarea, .ui-map__sidebar__item .gform_wrapper .validation_error, .gform_wrappe
   clear: both;
 }
 
-.woocommerce-checkout.woocommerce-order-received .woocommerce .woocommerce-thankyou-order-details li:not(nth-child(2n+3)):not(nth-child(3n+4)) {
-  margin-bottom: 5px;
-}
-
 @media screen and (min-width: 64em) {
   .woocommerce-checkout.woocommerce-order-received .woocommerce .woocommerce-thankyou-order-details li {
     float: left;
@@ -21698,7 +21694,7 @@ textarea, .ui-map__sidebar__item .gform_wrapper .validation_error, .gform_wrappe
   background-size: cover;
 }
 
-/* 
+/*
  *  Owl Carousel - Animate Plugin
  */
 .owl-carousel .animated {
@@ -21739,10 +21735,10 @@ textarea, .ui-map__sidebar__item .gform_wrapper .validation_error, .gform_wrappe
   }
 }
 
-/* 
+/*
  * 	Owl Carousel - Auto Height Plugin
  */
-/* 
+/*
  *  Core Owl Carousel CSS File
  */
 .owl-carousel {
@@ -21850,13 +21846,13 @@ textarea, .ui-map__sidebar__item .gform_wrapper .validation_error, .gform_wrappe
   display: block;
 }
 
-/* 
+/*
  * 	Owl Carousel - Lazy Load Plugin
  */
-/* 
+/*
  * 	Owl Carousel - Video Plugin
  */
-/* 
+/*
  *  Mods
  */
 .owl-item {
