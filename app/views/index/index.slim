@@ -1,72 +1,90 @@
 - provide :title, t(".title")
-main
-  div#home
-    section.l-band
-      div.ui-hero.ui-hero--carousel.ui-hero--fluid
-        div.ui-hero__wrapper
-          div.owl-carousel
-            div.ui-hero__slide
-              = link_to "#" do
-                div.row
-                  div.column
-                    div.ui-hero__slide__content
-                      div.pre-preheader
-                        = "Floret Flower Farm"
-                      div.preheader
-                        = "Est.2008"
-                      h2.h1.preheader
-                        = "Cultivating Beauty"
-                      div.subhead
-                        = "We are a small family farm in Washington's Skagit Valley"
-                      button.button.button--secondary
-                        = "Read our story"
-              div.ui-hero__slide__image data-interchange="[https://www.floretflowers.com/wp-content/uploads/2016/10/Floret_IMG_7278-1024x682.jpg, small], [https://www.floretflowers.com/wp-content/uploads/2016/10/Floret_IMG_7278-1440x960.jpg, xlarge], [https://www.floretflowers.com/wp-content/uploads/2016/10/Floret_IMG_7278-2000x1333.jpg, xxlarge]"
-            div.ui-hero__slide
-              = link_to "#" do
-                div.row
-                  div.column
-                    div.ui-hero__slide__content
-                      div.pre-preheader
-                        = "Floret Flower Farm"
-                      div.preheader
-                        = "Est.2008"
-                      h2.h1.keyline-single--short--after
-                        = "Cultivating Beauty"
-                      div.subhead
-                        = "We are a small family farm in Washington's Skagit Valley"
-                      button.button.button--secondary
-                        = "Visit our Resources"
-              div.ui-hero__slide__image data-interchange="[https://www.floretflowers.com/wp-content/uploads/2016/10/Floret_IMG_7278-1024x682.jpg, small], [https://www.floretflowers.com/wp-content/uploads/2016/10/Floret_IMG_7278-1440x960.jpg, xlarge], [https://www.floretflowers.com/wp-content/uploads/2016/10/Floret_IMG_7278-2000x1333.jpg, xxlarge]"
-            div.ui-hero__slide
-              = link_to "#" do
-                div.row
-                  div.column
-                    div.ui-hero__slide__content
-                      div.pre-preheader
-                        = "Floret Flower Farm"
-                      div.preheader
-                        = "Est.2008"
-                      h2.h1.keyline-single--short--after
-                        = "Cultivating Beauty"
-                      div.subhead
-                        = "We are a small family farm in Washington's Skagit Valley"
-                      button.button.button--secondary
-                        = "Visit our Resources"
-              div.ui-hero__slide__image data-interchange="[https://www.floretflowers.com/wp-content/uploads/2016/10/Floret_IMG_7278-1024x682.jpg, small], [https://www.floretflowers.com/wp-content/uploads/2016/10/Floret_IMG_7278-1440x960.jpg, xlarge], [https://www.floretflowers.com/wp-content/uploads/2016/10/Floret_IMG_7278-2000x1333.jpg, xxlarge]"
-            div.ui-hero__slide
-              = link_to "#" do
-                div.row
-                  div.column
-                    div.ui-hero__slide__content
-                      div.pre-preheader
-                        = "Floret Flower Farm"
-                      div.preheader
-                        = "Est.2008"
-                      h2.h1.keyline-single--short--after
-                        = "Cultivating Beauty"
-                      div.subhead
-                        = "We are a small family farm in Washington's Skagit Valley"
-                      button.button.button--secondary
-                        = "Visit our Resources"
-              div.ui-hero__slide__image data-interchange="[https://www.floretflowers.com/wp-content/uploads/2016/10/Floret_IMG_7278-1024x682.jpg, small], [https://www.floretflowers.com/wp-content/uploads/2016/10/Floret_IMG_7278-1440x960.jpg, xlarge], [https://www.floretflowers.com/wp-content/uploads/2016/10/Floret_IMG_7278-2000x1333.jpg, xxlarge]"
-
+section.main-container.col1-layout.home-content-container
+	div.container
+		div.std.row
+			div.col-lg-3.col-md-3.col-sm-12.col-xs-12
+				div.box_collection_pr
+					div.title_st
+						h2
+							= t ".product_category"
+						span.arrow_title.visible-md.visible-md
+							div.show_nav_bar.hidden-lg.hidden-md
+					div.list_item
+						ul
+							li 
+								= link_to "#", t(".new_product")
+							li 
+								= link_to "#", t(".new_product")
+							li 
+								= link_to "#", t(".new_product")
+							li 
+								= link_to "#", t(".new_product")
+							li 
+								= link_to "#", t(".new_product")
+							li 
+								= link_to "#", t(".new_product")
+							li 
+								= link_to "#", t(".new_product")
+							li 
+								= link_to "#", t(".new_product")
+			div.col-lg-9.col-md-9.col-sm-12.col-xs-12
+				div.best-seller-pro
+					div.slider-items-products
+						div.new_title.center
+							h2
+								= t "sales_promotion"
+					div#bag-seller-slider.product-flexslider.hidden-buttons
+						div.slider-items.slider-width-col4
+							div.product-item-slide.multi-columns-row
+								- (1..8).each do
+									div.col-lg-3.col-md-3.col-sm-6.col-xs-6.full_width480
+										div.col-item
+											div.product-image-area
+												a.product-image 
+													img src="//bizweb.dktcdn.net/thumb/large/100/176/403/products/triton-4x2at-39665ac4-083c-455f-b864-acf7dd16dc64-43cfb037-3e6c-4fd1-91f0-932a131efc69.png?v=1487582663927" class="img-responsive" alt="Mitsubishi Triton 1 cầu số sàn 4X2 MT"
+											div.hidden_mobile.hidden-sm.hidden-sx
+											div.info
+												div.info-inner
+													div.item-title
+														h3
+															a title="Mitsubishi Triton 1 cầu số sàn 4X2 MT" href="/mitsubishi-triton-4x2-mt" Mitsubishi Triton 1 cầu số sàn 4X2 MT
+													div.item-content
+														div.price-box
+															p.special-price
+																span.price
+																	= "575.000.000đ"
+															p.old-price
+																span.price-sep
+																	= "-"
+																span.price
+																	= "595.000.000"
+section.featured-pro.bg_spc
+	div.slider-items-products.container
+		div.new_title.center
+			h2
+				= t ".top_sale"
+			span
+		div#featured-slider.product-flexslider.hidden-buttons.block_btn_cart
+			div.slider-items.slider-width-col4.owl-carousel.owl-theme
+				- (1..4).each do
+					div.item
+						div.col-item
+							div.product-image-area
+								a.product-image title="PAJERO SPORT ALL NEW 2017 máy xăng 2 cầu 4X4 AT" href="/pajero-sport-all-new-2017-4x4-at"
+									img src="//bizweb.dktcdn.net/thumb/large/100/176/403/products/pajero-sport-2016.png?v=1487582883670" class="img-responsive" alt="PAJERO SPORT ALL NEW 2017 máy xăng 2 cầu 4X4 AT"
+							div.info
+								div.info-inner
+									div.item-title
+										h3
+											a title="PAJERO SPORT ALL NEW 2017 máy xăng 2 cầu 4X4 AT" href="/pajero-sport-all-new-2017-4x4-at">PAJERO SPORT ALL NEW 2017 máy xăng 2 cầu 4X4 AT
+									div.item-content
+										div.price-box
+											p.special-price
+												span.price
+													= "575.000.000đ"
+											p.old-price
+												span.price-sep
+													= "-"
+												span.price
+													= "595.000.000"
+								div.clearfix
