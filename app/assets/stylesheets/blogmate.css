@@ -166,7 +166,7 @@ blockquote cite a,blockquote cite a:visited,blockquote cite a:visited{color:#555
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 .ad-spots img{width:auto}
-.comment-form textarea;{width:250px}
+.comment-form textarea{width:250px}
 .widget-content{font-size:13px}
 }
 @media only screen and (min-width: 767px) and (max-width: 991px) {
