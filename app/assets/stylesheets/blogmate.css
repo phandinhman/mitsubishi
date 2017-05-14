@@ -160,7 +160,7 @@ blockquote cite a,blockquote cite a:visited,blockquote cite a:visited{color:#555
 }
 .comment-article label {
     padding: 10px 0 0px 0;
-}s
+}
 @media only screen and (min-width: 320px) and (max-width:479px) {
 .blog_entry-title a{font-size:18px}
 }
