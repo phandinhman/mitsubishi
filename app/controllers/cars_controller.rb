@@ -3,7 +3,9 @@ class CarsController < ApplicationController
   def index
   end
 
+  def new
+  end
+
   def show
-    binding.pry
   end
 end
