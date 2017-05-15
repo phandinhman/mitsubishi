@@ -16,9 +16,12 @@ gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.5"
 gem "slim"
 gem "font-awesome-rails"
+gem "friendly_id", "~> 5.1.0"
+gem "faker"
 
 group :development, :test do
   gem "sqlite3"
+  gem "pry"
   gem "byebug", platform: :mri
 end
 

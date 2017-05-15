@@ -2,31 +2,7 @@
 section.main-container.col1-layout.home-content-container
 	div.container
 		div.std.row
-			div.col-lg-3.col-md-3.col-sm-12.col-xs-12
-				div.box_collection_pr
-					div.title_st
-						h2
-							= t ".product_category"
-						span.arrow_title.visible-md.visible-md
-							div.show_nav_bar.hidden-lg.hidden-md
-					div.list_item
-						ul
-							li 
-								= link_to "#", t(".new_product")
-							li 
-								= link_to "#", t(".new_product")
-							li 
-								= link_to "#", t(".new_product")
-							li 
-								= link_to "#", t(".new_product")
-							li 
-								= link_to "#", t(".new_product")
-							li 
-								= link_to "#", t(".new_product")
-							li 
-								= link_to "#", t(".new_product")
-							li 
-								= link_to "#", t(".new_product")
+			= render "layouts/categories", categories: @categories
 			div.col-lg-9.col-md-9.col-sm-12.col-xs-12
 				div.best-seller-pro
 					div.slider-items-products
@@ -37,27 +13,7 @@ section.main-container.col1-layout.home-content-container
 						div.slider-items.slider-width-col4
 							div.product-item-slide.multi-columns-row
 								- (1..8).each do
-									div.col-lg-3.col-md-3.col-sm-6.col-xs-6.full_width480
-										div.col-item
-											div.product-image-area
-												a.product-image 
-													img src="//bizweb.dktcdn.net/thumb/large/100/176/403/products/triton-4x2at-39665ac4-083c-455f-b864-acf7dd16dc64-43cfb037-3e6c-4fd1-91f0-932a131efc69.png?v=1487582663927" class="img-responsive" alt="Mitsubishi Triton 1 cầu số sàn 4X2 MT"
-											div.hidden_mobile.hidden-sm.hidden-sx
-											div.info
-												div.info-inner
-													div.item-title
-														h3
-															a title="Mitsubishi Triton 1 cầu số sàn 4X2 MT" href="/mitsubishi-triton-4x2-mt" Mitsubishi Triton 1 cầu số sàn 4X2 MT
-													div.item-content
-														div.price-box
-															p.special-price
-																span.price
-																	= "575.000.000đ"
-															p.old-price
-																span.price-sep
-																	= "-"
-																span.price
-																	= "595.000.000"
+									= render "layouts/car"
 section.featured-pro.bg_spc
 	div.slider-items-products.container
 		div.new_title.center
@@ -99,12 +55,11 @@ section.featured-pro.bg_spc
 													span
 														= t ".buy_car"
 								div.clearfix
-
 section.fanpage-map.container
 	div.row
 		div.col-md-4.clo-sm-5.col-xs-12
-			div.fv-page 
-				data-href="https://www.facebook.com/tvluc130" 
+			div.fv-page
+				data-href="https://www.facebook.com/tvluc130"
 		div.col-md-8.col-sm-7.col-xs-12
 			iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDpI6MhVnUxiwuByje6j8_1sv-WZikpe6I
-    				&q=Space+Needle,Seattle+WA" allowfullscreen> width="100%" height="300" frameborder="0" style="border:0" allowfullscreen
+    				&q=Space+Needle,Seattle+WA" allowfullscreen width="100%" height="300" frameborder="0" style="border:0" allowfullscreen
