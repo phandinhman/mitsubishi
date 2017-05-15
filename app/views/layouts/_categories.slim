@@ -1,0 +1,12 @@
+div.col-lg-3.col-md-3.col-sm-12.col-xs-12
+  div.box_collection_pr
+    div.title_st
+      h2
+        = t ".product_category"
+      span.arrow_title.visible-md.visible-md
+        div.show_nav_bar.hidden-lg.hidden-md
+    div.list_item
+      ul
+        - @categories.each do |category|
+          li
+            = link_to category.name, category_path(category)

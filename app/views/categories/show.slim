@@ -1,0 +1,68 @@
+- provide :title, @category.name
+div.main-container.col2-left-layout
+  div.container
+    div.row
+      section.col-main.col-sm-8.col-md-9.col-sm-push-4.col-md-push-3
+        div.category-description.std
+          div.slider-items-products
+            div#category-desc-slider.product-flexslider.hidden-buttons
+              div.slider-items.slider-width-col1
+        div.category-title
+          h1
+            = @category.name
+        div.category-products
+          div.toolbar
+            div.sorter
+              div.view-mode
+                a.view-grid.active
+                  i.fa.fa-th
+                a.view-list.switch-view
+                  i.fa.fa-list
+            div.sort-by
+              label.left
+                = t ".sort_by"
+              select
+                option selected value="default" Mac dinh
+                option value="alpha-asc" A-> Z
+                option value="alpha-asc" A-> Z
+                option value="alpha-asc" A-> Z
+                option value="alpha-asc" A-> Z
+                option value="alpha-asc" A-> Z
+                option value="alpha-asc" A-> Z
+          ul.products-grid.hidden_btn_cart.multi-columns-row
+            - @cars.each do |car|
+              li.item.col-lg-4.col-md-4.col-sm-6.col-xs-6
+                div.col-item
+                  div.product-image-area
+                    a.product-image
+                      = image_tag car&.image unless car&.image.blank?
+                  div.hidden_mobile.hidden-sm.hidden-sx
+                  div.info
+                    div.info-inner
+                      div.item-title
+                        h3
+                          a title="ATTRAGE Số sàn MT" href="/mitsubishi-triton-4x2-mt" ATTRAGE Số sàn MT
+                      div.item-content
+                        div.price-box
+                          p.special-price
+                            span.price
+                              = car&.special_cost
+                          p.old-price
+                            span.price-sep
+                              = "-"
+                            span.price
+                              = car&.cost
+          div.page
+            div.pages
+              ul.pagination
+                li.active
+      aside.col-left.sidebar.col-sm-4.col-md-3.col-xs-12.col-sm-pull-8.col-md-pull-9
+        div.box_collection_pr
+          div.title_st
+            h2
+              = t ".search_by"
+            span.arrow_title
+          div.list_item
+            ul
+              li
+                = @category.name
