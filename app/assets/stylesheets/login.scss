@@ -1,0 +1,39 @@
+.wrapper-module-login {
+  background: asset-url("mitsubishi-asx.jpg") no-repeat top right -35px;
+  width: 100%;
+  height: 110vh;
+  background-size: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 0 4px 4px -4px #000;
+}
+.wrapper-module-login .main-module-login-content {
+  max-width: 100%;
+  position: absolute;
+  width: 700px;
+  left: 50%;
+  top: 50%;
+  height: 450px;
+  transform: translateX(-50%) translateY(-50%);
+}
+.wrapper-module-login .main-module-login-content .main-module-login-left {
+  background: asset-url("mitsubishi-asx.jpg") no-repeat top right -35px;
+  width: 350px;
+  height: 450px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 0 4px 4px -4px #000;
+}
+.main-module-login-right {
+  background: #ffffff;
+  width: 350px;
+  height: 450px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 0 35px;
+}
+.main-module-login-right .images-mitsubishi-login {
+  background: asset-url("image-mitsubishi-login.png") no-repeat;
+  height: 30px;
+  margin: 40px 0 70px 0;
+}
