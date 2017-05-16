@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module Mitsubishi
   class Application < Rails::Application
+    config.serve_static_assets = true
     config.assets.precompile += Ckeditor.assets
     config.assets.precompile += %w( ckeditor/* )
     config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
