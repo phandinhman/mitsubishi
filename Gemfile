@@ -19,6 +19,9 @@ gem "font-awesome-rails"
 gem "friendly_id", "~> 5.1.0"
 gem "faker"
 gem "devise"
+gem "ckeditor"
+gem "mini_magick"
+gem "carrierwave"
 
 group :development, :test do
   gem "mysql2"
