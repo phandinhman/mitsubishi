@@ -1,0 +1,16 @@
+- @car.errors.any?
+  ul
+    - @car.errors.full_messages.each do |message|
+      li
+        = message
+= form_for [:admin, @car] do |f|
+  div
+    = f.label :name
+  div
+    = f.text_field :name
+  div
+    = f.label :body
+  div
+    = f.cktext_area :body, rows: 100
+  div
+    = f.submit
