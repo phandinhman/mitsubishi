@@ -7,6 +7,7 @@ class CreateCars < ActiveRecord::Migration[5.0]
       t.integer :width
       t.integer :height
       t.integer :length
+      t.text :body
       t.references :category, foreign_key: true
 
       t.timestamps
