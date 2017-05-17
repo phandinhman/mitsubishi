@@ -5,7 +5,7 @@ default: &default
   host: localhost
   database: "mitsubishi"
   username: root
-  password: "0000"
+  password: "123456"
 development:
   <<: *default
 
