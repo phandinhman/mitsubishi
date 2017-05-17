@@ -1,21 +1,23 @@
-div.wrapper-module-login
-  section.main-module-login-content.row
-    div.main-module-login-left.col.m6
-    div.main-module-login-right.col.m6
+- provide :title, t(".title")
+div.wrapper-module-login.no-header-bottom
+  div.main-module-login-content.row
+    div.main-module-login-left.col-md-6
+    div.main-module-login-right.col-md-6
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         div.images-mitsubishi-login
         div.address.input-field
           i.address-icon
-          = f.email_field :email, autofocus: true, class: "validate", placeholder: t(".email"), id: "address-login"
+          = f.email_field :email, autofocus: true, class: "validate", placeholder: t(".email")
         div.lock.lock-login.input-field
           i.lock-icon
-          = f.password_field :password, autocomplete: "off", class: "validate"
+          = f.password_field :password, autocomplete: "off", class: "validate",
+            placeholder: t(".password")
         - if devise_mapping.rememberable?
           div.accepts-checkbox-login
             div.checkbox
-              = f.check_box :remember_me
-              = f.label t(".remember_me")
+              = f.check_box :remember_me, class: "filled-in", id: "accepts-checkbox-login"
+              = f.label t(".remember_me"), for: "accepts-checkbox-login"
         = button_tag(type: "submit", class: "waves-effect waves-light btn-flat no-radius btn modal-action modal-close button-module-login reset-email") do
-          i.material-icons.left" 
-            = t ".login"
+          i.material-icons.left
+          = t ".login"
       = render "devise/shared/links"
