@@ -23,6 +23,11 @@ gem "mini_magick"
 gem "carrierwave"
 gem "react-rails"
 gem "webpacker"
+gem 'grape'
+gem 'active_model_serializers'
+gem 'grape-active_model_serializers'
+gem 'sinatra', require: false
+gem "config"
 
 group :development, :test do
   gem "mysql2"
