@@ -4,7 +4,7 @@ var CarHighlight = React.createClass({
 
   componentDidMount() {
     console.log("hello");
-    $.getJSON("http://localhost:3000/api/v1/cars", (response) => {this.setState({cars: response.mitsubishi.data})});
+    $.getJSON("/api/v1/cars", (response) => {this.setState({cars: response.mitsubishi.data})});
   },
 
   render: function () {
