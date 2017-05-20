@@ -300,6 +300,7 @@ DEPENDENCIES
   rails (~> 5.0.2)
   rails_12factor
   react-rails
+  responders
   sass-rails (~> 5.0)
   sinatra
   slim
