@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170517035451) do
+ActiveRecord::Schema.define(version: 20170520013356) do
 
   create_table "car_details", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
@@ -28,11 +28,12 @@ ActiveRecord::Schema.define(version: 20170517035451) do
     t.integer  "length"
     t.text     "body",         limit: 65535
     t.integer  "category_id"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at",                                 null: false
+    t.datetime "updated_at",                                 null: false
     t.string   "slug"
     t.integer  "special_cost"
     t.string   "image"
+    t.boolean  "is_highlight",               default: false
     t.index ["category_id"], name: "index_cars_on_category_id", using: :btree
     t.index ["slug"], name: "index_cars_on_slug", unique: true, using: :btree
   end

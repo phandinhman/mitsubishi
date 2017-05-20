@@ -2,7 +2,7 @@ class IndexController < ApplicationController
   before_action :load_categories, only: :index
 
   def index
-    @cars = Car.all
+    @cars = Car.highlight
   end
 
   private
