@@ -28,6 +28,7 @@ gem 'active_model_serializers'
 gem 'grape-active_model_serializers'
 gem 'sinatra', require: false
 gem "config"
+gem "responders"
 
 group :development, :test do
   gem "mysql2"
