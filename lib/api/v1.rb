@@ -24,4 +24,5 @@ class API::V1 < Grape::API
   end
 
   mount CarsAPI
+  mount CategoriesAPI
 end
