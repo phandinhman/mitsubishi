@@ -29,6 +29,7 @@ gem 'grape-active_model_serializers'
 gem 'sinatra', require: false
 gem "config"
 gem "responders"
+gem "rack-cors"
 
 group :development, :test do
   gem "mysql2"
