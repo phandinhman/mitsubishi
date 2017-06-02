@@ -30,6 +30,9 @@ gem 'sinatra', require: false
 gem "config"
 gem "responders"
 gem "rack-cors"
+gem "bcrypt"
+gem "jwt"
+gem "devise_token_auth"
 
 group :development, :test do
   gem "mysql2"
