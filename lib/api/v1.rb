@@ -18,11 +18,29 @@ class API::V1 < Grape::API
           Settings.string_success => Settings.success,
           Settings.status_code => status_code,
           Settings.message => message
-        }.merge(data)
+          }.merge(data)
       }
     end
+
+    def render_record_not_found!
+      error!({status_code: Settings.not_found, content: Settings.not_found},
+        Settings.http_code.code_200)
+    end
+
+    # def claims
+    #   auth_header = request.headers['Authorization'] and
+    #   token = auth_header.split(' ').last and
+    #   JsonWebToken.decode(token)
+    # rescue
+    #   nil
+    # end
+
+    # def invalid_authentication
+    #   render json: {error: t('devise.failure.unauthenticated')}, status: :unauthorized
+    # end
   end
 
   mount CarsAPI
   mount CategoriesAPI
+  mount SessionsAPI
 end

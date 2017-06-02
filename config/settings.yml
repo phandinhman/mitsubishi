@@ -6,3 +6,76 @@ code: "code"
 message: "message"
 render_success: "Sucess"
 meta: "mitsubishi"
+not_found: "Not Found"
+content: "content"
+http_code:
+  code_200: 200
+  code_400: 400
+  content_400: "Bad Request"
+  code_404: 404
+  content_404: "Not Found"
+  code_401: 401
+  content_401: "Unauthorized"
+  code_403: 403
+tatus_codes:
+  connection_refused: 400
+  server_error: 500
+  error: 600
+  unauthorized: 601
+  maintenance: 602
+  forbidden: 603
+  not_found: 604
+  param_not_present: 615
+  message_not_present: 625
+  invalid_point: 605
+  invalid_params: 615
+  render_success: 800
+  permission: 903
+  referral_blocked: 900
+  no_user_to_sync: 904
+  blocked_user: 905
+  invalid_invite_code: 906
+  no_permission_to_sync: 907
+  need_to_update_app: 909
+  unsupported_region: 908
+  login_success: 901
+  sync_success: 911
+  is_new_device: 902
+  wrong_developer_key: 912
+  sdk_success: 701
+  invalid_user: 704
+  invalid_game: 705
+  check_exist_param: 771
+  invalid_header: 772
+  invalid_param: 773
+  invalid_hash_key: 774
+  token_expired: 706
+  not_a_number: 707
+  no_user_found: 708
+  invalid_sms: 714
+  pin_expired: 715
+  wrong_format_photo: 717
+  invalid_phone_number: 716
+  redemption_failed: 726
+  not_enough_point: 723
+  unknown_product: 724
+  not_verified: 725
+  feedback_success: 811
+  feedback_content_long: 813
+  phone_number_existed: 923
+  authen_fail: 924
+  not_exist_user: 925
+  wrong_password: 926
+  missing_auth_name: 933
+  wrong_auth_name_format: 934
+  missing_password: 935
+  missing_fb_uid: 939
+  missing_fb_access_token: 932
+  wrong_format_password: 936
+  password_confirm_not_match: 937
+  already_exist_name: 938
+  invalid_access: 943
+  phone_not_present: 945
+  phone_not_found: 946
+  wrong_format_phone: 941
+  update_event_popup_fail: 942
