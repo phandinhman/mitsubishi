@@ -31,8 +31,7 @@ class API::V1::SessionsAPI < Grape::API
         render_success 400, Settings.render_success,
           data: {status: "ok", token: auth_token}
       else
-        render_success 400, Settings.render_success,
-          data: {status: "ok", token: auth_token}
+        render_record_not_found!
       end
     end
   end
