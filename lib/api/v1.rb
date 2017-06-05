@@ -23,9 +23,8 @@ class API::V1 < Grape::API
     end
 
     def render_record_not_found!
-      binding.pry
       error!({status_code: Settings.not_found, content: Settings.not_found},
-        Settings.http_code.code_200)
+        Settings.http_code.code_401)
     end
 
     def authenticate!

@@ -1,5 +1,7 @@
 string_success: "success"
 success: "success"
+error: "error"
+string_error: "error"
 status: "status"
 status_code: "status_code"
 code: "code"
