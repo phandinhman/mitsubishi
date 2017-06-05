@@ -1,6 +1,5 @@
 module ErrorFormatter
   def self.call message, _backtrace, _options, env
-    binding.pry
     {
       Settings.meta => {
         Settings.string_success => Settings.error,
