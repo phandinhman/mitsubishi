@@ -26,15 +26,13 @@ class API::V1::SessionsAPI < Grape::API
       end
 
       user = User.find_by email: email.downcase
-      binding.pry
       if user && user.valid_password?(password)
-        auth_token = JsonWebToken.encode({user_id: user.id})
-        binding.pry
+        auth_token = JsonWebToken.encode({user_id: user.id, email: user.email})
         render_success 400, Settings.render_success,
           data: {status: "ok", token: auth_token}
       else
-        binding.pry
-        render_record_not_found!
+        render_success 400, Settings.render_success,
+          data: {status: "ok", token: auth_token}
       end
     end
   end

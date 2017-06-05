@@ -23,9 +23,22 @@ class API::V1 < Grape::API
     end
 
     def render_record_not_found!
+      binding.pry
       error!({status_code: Settings.not_found, content: Settings.not_found},
         Settings.http_code.code_200)
     end
+
+    def authenticate!
+      error!({status_code: Settings.status_codes.unauthorized, content: Settings.unauthorized},
+        Settings.http_code.code_200) unless current_user
+      error!({status_code: Settings.status_codes.blocked_user, content: I18n.t("api.error.authenticate.blocked_user")},
+        Settings.http_code.code_200) unless current_user.active?
+    end
+
+    def current_user
+      @current_user ||= User.current_user headers[Settings.requests.access_token]
+    end
+
 
     # def claims
     #   auth_header = request.headers['Authorization'] and
