@@ -1,15 +1,65 @@
 - provide :title, t(".title")
 section.main-container.col1-layout.home-content-container
-  div.container
-    div.std.row
-      = render "layouts/categories", categories: @categories
-      div.col-lg-9.col-md-9.col-sm-12.col-xs-12
-        div.best-seller-pro
-          div.slider-items-products
-            div.new_title.center
-              h2
-                = t "sales_promotion"
-          div#bag-seller-slider.product-flexslider.hidden-buttons
-            div.slider-items.slider-width-col4
-              = react_component "CarHighlight"
-
+	div.container
+		div.std.row
+			= render "layouts/categories", categories: @categories
+			div.col-lg-9.col-md-9.col-sm-12.col-xs-12
+				div.best-seller-pro
+					div.slider-items-products
+						div.new_title.center
+							h2
+								= t "sales_promotion"
+					div#bag-seller-slider.product-flexslider.hidden-buttons
+						div.slider-items.slider-width-col4
+							div.product-item-slide.multi-columns-row
+								- (1..8).each do
+									= render "layouts/car"
+section.featured-pro.bg_spc
+	div.slider-items-products.container
+		div.new_title.center
+			h2
+				= t ".top_sale"
+			span
+		div#featured-slider.product-flexslider.hidden-buttons.block_btn_cart
+			div.slider-items.slider-width-col4.owl-carousel.owl-theme
+				- (1..4).each do
+					div.item
+						div.col-item
+							div.product-image-area
+								a.product-image title="PAJERO SPORT ALL NEW 2017 máy xăng 2 cầu 4X4 AT" href="/pajero-sport-all-new-2017-4x4-at"
+									img src="//bizweb.dktcdn.net/thumb/large/100/176/403/products/pajero-sport-2016.png?v=1487582883670" class="img-responsive" alt="PAJERO SPORT ALL NEW 2017 máy xăng 2 cầu 4X4 AT"
+							div.hidden_mobile.hidden-sm.hidden-xs
+								form.variants
+									div.hover_fly
+									a.over_bg
+							div.info
+								div.info-inner
+									div.item-title
+										h3
+											a title="PAJERO SPORT ALL NEW 2017 máy xăng 2 cầu 4X4 AT" href="/pajero-sport-all-new-2017-4x4-at" PAJERO SPORT ALL NEW 2017 máy xăng 2 cầu 4X4 AT
+									div.item-content
+										div.price-box
+											p.special-price
+												span.price
+													= "575.000.000đ"
+											p.old-price
+												span.price-sep
+													= "-"
+												span.price
+													= "595.000.000"
+									div.hidden_mobile.hidden-lg.hidden-md
+										form.variants
+											div.actions
+												input type="hidden"
+												button.button.btn-cart.btn-cart.add_to_cart
+													span
+														= t ".buy_car"
+								div.clearfix
+section.fanpage-map.container
+	div.row
+		div.col-md-4.clo-sm-5.col-xs-12
+			div.fv-page
+				data-href="https://www.facebook.com/tvluc130"
+		div.col-md-8.col-sm-7.col-xs-12
+			iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDpI6MhVnUxiwuByje6j8_1sv-WZikpe6I
+    				&q=Space+Needle,Seattle+WA" allowfullscreen width="100%" height="300" frameborder="0" style="border:0" allowfullscreen
