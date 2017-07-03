@@ -12,8 +12,7 @@ section.main-container.col1-layout.home-content-container
 					div#bag-seller-slider.product-flexslider.hidden-buttons
 						div.slider-items.slider-width-col4
 							div.product-item-slide.multi-columns-row
-								- (1..8).each do
-									= render "layouts/car"
+								= render @cars
 section.featured-pro.bg_spc
 	div.slider-items-products.container
 		div.new_title.center
@@ -61,5 +60,5 @@ section.fanpage-map.container
 			div.fv-page
 				data-href="https://www.facebook.com/tvluc130"
 		div.col-md-8.col-sm-7.col-xs-12
-			iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDpI6MhVnUxiwuByje6j8_1sv-WZikpe6I
-    				&q=Space+Needle,Seattle+WA" allowfullscreen width="100%" height="300" frameborder="0" style="border:0" allowfullscreen
+			iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDpI6MhVnUxiwuByje6j8_1sv-WZikpe6I&q=Space+Needle,Seattle+WA" allowfullscreen width="100%" height="300" frameborder="0" style="border:0" allowfullscreen
+= render "layouts/footer"

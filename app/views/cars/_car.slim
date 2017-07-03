@@ -1,0 +1,21 @@
+div.col-lg-3.col-md-3.col-sm-6.col-xs-6.full_width480
+  div.col-item
+    div.product-image-area
+      a.product-image
+        img src="//bizweb.dktcdn.net/thumb/large/100/176/403/products/triton-4x2at-39665ac4-083c-455f-b864-acf7dd16dc64-43cfb037-3e6c-4fd1-91f0-932a131efc69.png?v=1487582663927" class="img-responsive" alt="Mitsubishi Triton 1 cầu số sàn 4X2 MT"
+    div.hidden_mobile.hidden-sm.hidden-sx
+    div.info
+      div.info-inner
+        div.item-title
+          h3
+            = link_to car.name, car_path(car)
+        div.item-content
+          div.price-box
+            p.special-price
+              span.price
+                = car.special_cost
+            p.old-price
+              span.price-sep
+                = "-"
+              span.price
+                = car.cost
