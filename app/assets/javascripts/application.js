@@ -12,7 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap-sprockets
 //= require ckeditor/init
-//= require font-awesome
 //= require_tree .
