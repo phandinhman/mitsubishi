@@ -1,0 +1,1 @@
+var Category = React.createClass({})
