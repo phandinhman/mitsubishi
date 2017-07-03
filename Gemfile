@@ -21,7 +21,6 @@ gem "devise"
 gem "ckeditor", github: "galetahub/ckeditor"
 gem "mini_magick"
 gem "carrierwave"
-gem "react-rails"
 gem "webpacker"
 gem 'grape'
 gem 'active_model_serializers'
