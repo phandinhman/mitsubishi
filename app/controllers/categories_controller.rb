@@ -9,6 +9,10 @@ class CategoriesController < ApplicationController
     @cars = Category.friendly.find(params[:id]).cars
   end
 
+  def load_categories
+    @categories = Category.all
+  end
+
   def load_category
     @category = Category.friendly.find params[:id]
   end

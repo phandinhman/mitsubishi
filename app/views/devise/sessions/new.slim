@@ -1,23 +1,54 @@
 - provide :title, t(".title")
-div.wrapper-module-login.no-header-bottom
-  div.main-module-login-content.row
-    div.main-module-login-left.col-md-6
-    div.main-module-login-right.col-md-6
-      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-        div.images-mitsubishi-login
-        div.address.input-field
-          i.address-icon
-          = f.email_field :email, autofocus: true, class: "validate", placeholder: t(".email")
-        div.lock.lock-login.input-field
-          i.lock-icon
-          = f.password_field :password, autocomplete: "off", class: "validate",
-            placeholder: t(".password")
-        - if devise_mapping.rememberable?
-          div.accepts-checkbox-login
-            div.checkbox
-              = f.check_box :remember_me, class: "filled-in", id: "accepts-checkbox-login"
-              = f.label t(".remember_me"), for: "accepts-checkbox-login"
-        = button_tag(type: "submit", class: "waves-effect waves-light btn-flat no-radius btn modal-action modal-close button-module-login reset-email") do
-          i.material-icons.left
-          = t ".login"
-      = render "devise/shared/links"
+section.main-container.col1-layout
+  .main.container
+    .account-login
+      .page-title
+        h2 Đăng nhập
+      fieldset.col2-set
+        legend Đăng nhập / tạo tài khoản
+        .col-2.registered-users
+          strong Đăng nhập
+          .content
+            p
+              = devise_error_messages
+            p Nếu bạn đã có tài khoản, xin vui lòng đăng nhập
+            = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+              ul.form-list
+                li
+                  label for="email" 
+                    =  "Email "
+                    span.required *
+                  br
+                  = f.email_field :email, autofocus: true, class: "input-text required-entry"
+                li
+                  label for="pass" 
+                    = "Mật khẩu"
+                    span.required *
+                  br
+                  = f.password_field :password, {class: "input-text required-entry validate-password"}
+              p.required * Yêu cầu bắt buộc
+              .buttons-set
+                button#send2.button.login name="send" type="submit" 
+                  span = "Đăng nhập"
+                a#RecoverPassword.forgot.forgot-word href="#recover" onclick=("showRecoverPasswordForm();return false;")  Quên mật khẩu?
+            div#recover_password style="display:none;"
+              h3 = "Đặt lại mật khẩu"
+              p id = "intro note-reset"  = "Chúng tôi sẽ gửi cho bạn một email để kích hoạt việc đặt lại mật khẩu."
+              form#recover_customer_password accept-charset="UTF-8" action="/account/recover" method="post" 
+                input name="FormType" type="hidden" value="recover_customer_password" 
+                input name="utf8" type="hidden" value="true" 
+                label for="email" 
+                  = "Email"
+                  span#required *
+                input#email.input-control name="email" style="height:34px;" title="email" type="email" value="" 
+                p.action-btn style=("margin-top: 15px;") 
+                  input.button.stl_btn_reg type="submit" value="Gửi" 
+                  = "hoặc"
+                  a href="#" onclick=("hideRecoverPasswordForm();return false;")  Hủy
+        .col-1.new-users
+          strong ="Khách hàng mới"
+          .content
+            p Bằng cách tạo một tài khoản với cửa hàng của chúng tôi, bạn sẽ có thể thực hiện những quy trình mua hàng nhanh hơn, lưu trữ nhiều địa chỉ gửi hàng, xem và theo dõi đơn đặt hàng của bạn trong tài khoản của bạn và nhiều hơn nữa.
+            .buttons-set
+              button.button.create-account onclick="window.location='/account/register';" type="button" 
+                span Tạo tài khoản

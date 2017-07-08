@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   root "index#index"
   resources :categories
   resources :cars
+  resources :abouts, path: "gioi-thieu"
 end
