@@ -1,8 +1,7 @@
 <header class="header-container">
-   <div class="header-top">
+    <div class="header-top">
       <div class="container">
          <div class="row">
-            <!-- Header Language -->
             <div class="col-sm-8 col-xs-12">
                <div class="welcome-msg hidden-xs">Chào mừng bạn tới <a>Thế giới xe mitsubishi</a> | Hotline : <a>0905136174</a></div>
                <div class="account-msg visible-xs">
@@ -14,18 +13,27 @@
                </div>
             </div>
             <div class="col-sm-4 col-xs-12">
-               <!-- Header Top Links -->
                <div class="toplinks">
                   <div class="links hidden-xs">
-                     <div class="register"><a title="Register" href="/account/register"><span  class="hidden-xs">Đăng ký</span></a></div>
-                     <div class="login"><a title="Login" href="/account/login"><span  class="hidden-xs">Đăng nhập</span></a></div>
+                    <% if user_signed_in? %>
+                        <div class="myaccount"><a title=" Tài khoản của tôi " href="/account"><span class="hidden-xs"> Tài khoản của tôi </span></a></div>
+                      <div class="wishlist">
+                        <%= link_to "Thoát", destroy_user_session_path, method: :delete, id: "customer_logout_link" %>
+                      </div>
+                    <% else %>
+                        <div class="register"><a title="Register" href="/account/register"><span  class="hidden-xs">Đăng ký</span></a></div>
+                      <div class="login">
+                        <%= link_to new_user_session_path, title: "Login", id: "customer_logout_link" do %>
+                            <span class="hidden-xs">Đăng nhập</span>
+                        <% end %>
+                      </div>
+                    <% end %>
                   </div>
                   <div class="links visible-xs">
                      <div><a title="search" href="/search"><span class="fa fa-search"></span></a></div>
                      <div class="bag_shop" onclick="window.location.href='/cart'"><a title="cart" href="/cart"><span class="cart-total">0</span></a></div>
                   </div>
                </div>
-               <!-- End Header Top Links -->
             </div>
          </div>
       </div>
@@ -33,25 +41,19 @@
    <div class="header container">
       <div class="row">
          <div class="col-lg-4 col-sm-4 col-md-4 cl_logo">
-
-            <!-- Header Logo -->
             <%= link_to root_path do%>
                <img alt="Thế giới Mitsubishi, xe mitsubishi, đại lý mitsubishi, mitsubishi attrage, mitsubishi pajero sport, mitsubishi outlander, mitsubishi pajero sport, mitsubishi triton, mitsubishi mirage" src="//bizweb.dktcdn.net/100/176/403/themes/231146/assets/logo.png?1494382782936" />
                <p class="sl-txt">mitsubishi motor</p>
             <% end %>
-            <!-- End Header Logo -->
          </div>
          <div class="col-lg-5 col-sm-5 col-md-5">
-            <!-- Search-col -->
             <div class="search-box">
                <form action="/search" method="get" id="search_mini_form">
                   <input type="text" placeholder="Nhập thông tin tìm kiếm" value="" maxlength="70" class="" name="query" id="search">
                   <button type="submit" id="submit-button" class="search-btn-bg"><span></span></button>
                </form>
             </div>
-            <!-- End Search-col -->
          </div>
-         <!-- Top Cart -->
          <div class="col-lg-3 col-sm-3 col-md-3">
             <div class="top-cart-contain">
                <div class="mini-cart" id="open_shopping_cart">
@@ -76,7 +78,6 @@
                </div>
             </div>
          </div>
-         <!-- End Top Cart -->
       </div>
    </div>
 </header>
@@ -88,7 +89,6 @@
                <img alt="Thế giới Mitsubishi, xe mitsubishi, đại lý mitsubishi, mitsubishi attrage, mitsubishi pajero sport, mitsubishi outlander, mitsubishi pajero sport, mitsubishi triton, mitsubishi mirage" src="//bizweb.dktcdn.net/100/176/403/themes/231146/assets/logo.png?1494382782936" />
             <% end %>
          </div>
-         <!-- mobile-menu -->
          <div class="hidden-desktop" id="mobile-menu">
             <ul class="navmenu">
                <li>
@@ -150,7 +150,6 @@
             </ul>
             <!--navmenu-->
          </div>
-         <!--End mobile-menu -->
          <ul id="nav" class="hidden-xs">
             <li class="level0 parent drop-menu  active "><a href="/"><span>Trang chủ</span></a></li>
             <li class="level0 parent drop-menu "><a href="/gioi-thieu"><span>Giới thiệu</span></a></li>
