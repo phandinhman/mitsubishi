@@ -55,4 +55,5 @@ class API::V1 < Grape::API
   mount CarsAPI
   mount CategoriesAPI
   mount SessionsAPI
+  mount CommentsAPI
 end

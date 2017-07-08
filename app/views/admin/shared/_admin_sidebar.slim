@@ -1,0 +1,139 @@
+aside.main-sidebar
+  section.sidebar
+    .user-panel
+      .pull-left.image
+        = image_tag get_image_url(current_operator, :avatar), class: "img-circle hoverZoomLink", alt: "User Image"
+      .pull-left.info
+        p = current_operator.name
+    span#select_sidebar data-action="#{params[:action]}" data-controller="#{params[:controller]}"
+    ul.sidebar-menu
+      li.header style="text-transform: uppercase;"
+        = t "title.main_controller"
+      li#system_dashboard_operator_dashboards
+        = link_to operator_system_dashboard_path do
+          i.fa.fa-dashboard
+          span = t "title.system_dashboard"
+      li.treeview
+        a href="#"
+          i.fa.fa-gamepad
+          span = t "title.games"
+          i.fa.fa-angle-left.pull-right
+        ul.treeview-menu
+          li#system_game_operator_dashboards
+            = link_to operator_system_game_path do
+              i.fa.fa-circle-o
+              = t "title.system_games"
+          li#index_operator_games
+            = link_to operator_games_path do
+              i.fa.fa-circle-o
+              = t "title.my_games"
+      li.treeview
+        a href="#"
+          i.fa.fa-paw
+          span = t "title.challenges"
+          i.fa.fa-angle-left.pull-right
+        ul.treeview-menu
+          li#system_challenge_operator_dashboards
+            = link_to operator_system_challenge_path do
+              i.fa.fa-circle-o
+              = t "title.system_challenges"
+          li#index_operator_challenges
+            = link_to operator_challenges_path do
+              i.fa.fa-circle-o
+              = t "title.my_challenges"
+      li#system_redeem_product_operator_dashboards
+        = link_to operator_system_redeem_product_path do
+          i.fa.fa-shopping-cart
+          span = t "title.system_redeem_products"
+      li.treeview
+        a href="#"
+          i.fa.fa-user
+          span = t "title.user"
+          i.fa.fa-angle-left.pull-right
+        ul.treeview-menu
+          li#system_user_operator_dashboards
+            = link_to operator_system_user_path do
+              i.fa.fa-circle-o
+              span = t "title.user_list"
+          li#system_attanded_event_by_user_operator_dashboards
+            = link_to operator_system_attanded_event_by_user_path do
+              i.fa.fa-circle-o
+              span = t "title.system_attended_event_by_user"
+      li.treeview
+        a href="#"
+          i.fa.fa-bar-chart
+          span = t "title.report"
+          i.fa.fa-angle-left.pull-right
+        ul.treeview-menu
+          li#system_dau_report_operator_dashboards
+            = link_to operator_system_dau_report_path do
+              i.fa.fa-circle-o
+              span = t "title.system_dau_report"
+          li#system_kpi_daily_operator_dashboards
+            = link_to operator_system_kpi_daily_path do
+              i.fa.fa-circle-o
+              span = t "title.system_kpi"
+          li#system_kpi_daily
+            = link_to operator_system_download_report_path do
+              i.fa.fa-circle-o
+              span = t "title.system_download_report"
+      li.treeview
+        a href="#"
+          i.fa.fa-gavel
+          span = t "title.maintenances"
+          i.fa.fa-angle-left.pull-right
+        ul.treeview-menu
+          li#edit_operator_maintenances
+            = link_to edit_operator_maintenance_path Maintenance.first do
+              i.fa.fa-wrench
+              span = t "title.settings"
+          li#index_operator_user_blocks
+            = link_to operator_user_blocks_path do
+              i.fa.fa-lock
+              span = t "title.blocked_users"
+          li#index_operator_maintenance_logs
+            = link_to operator_maintenance_logs_path do
+              i.fa.fa-book
+              span = t "title.maintenance_logs"
+          li#index_operator_versions
+            = link_to operator_versions_path do
+              i.fa.fa-coffee
+              span = t "title.versions"
+          li#system_operator_operator_dashboards
+            = link_to operator_system_operator_path do
+              i.fa.fa-user-secret
+              span = t "title.system_operators"
+          li#index_operator_feedbacks
+            = link_to operator_feedbacks_path do
+              i.fa.fa-book
+              span = t "title.feedbacks"
+          li#index_operator_special_invites
+            = link_to operator_special_invites_path do
+              i.fa.fa-gift
+              span = t "title.special_invite"
+          li#index_operator_compensates
+            = link_to operator_compensates_path do
+              i.fa.fa-gift
+              span = t "title.compensate"
+          li#exchange_operator_examination
+            = link_to operator_exam_exchange_path do
+              i.fa.fa-bookmark
+              span = t "title.examination.exchange"
+      li.treeview
+        a href="#"
+          i.fa.fa-desktop
+          span = t "title.app_text_management"
+          i.fa.fa-angle-left.pull-right
+        ul.treeview-menu
+            li#index_operator_policies
+              = link_to operator_policies_path do
+                i.fa.fa-fort-awesome
+                span = t "title.policies"
+            li#index_operator_faqs
+              = link_to operator_faqs_path do
+                i.fa.fa-flag
+                span = t "title.faq"
+            li#index_operator_message_tapes
+              = link_to operator_message_tapes_path do
+                i.fa.fa-envelope-o
+                span = t "title.message_tapes"

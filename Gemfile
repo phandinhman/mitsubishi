@@ -32,6 +32,7 @@ gem "rack-cors"
 gem "bcrypt"
 gem "jwt"
 gem "devise_token_auth"
+gem "cancan"
 
 group :development, :test do
   gem "mysql2"
