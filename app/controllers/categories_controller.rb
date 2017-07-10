@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :load_car_by_category, :load_category, only: [:show]
+  load_and_authorize_resource find_by: :slug
 
   def show
   end

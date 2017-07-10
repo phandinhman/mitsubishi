@@ -1,5 +1,5 @@
 class CarsController < ApplicationController
-  before_action :load_car, only: :show
+  load_and_authorize_resource find_by: :slug
 
   def index
   end
@@ -8,10 +8,5 @@ class CarsController < ApplicationController
   end
 
   def show
-  end
-
-  private 
-  def load_car
-    @car = Car.friendly.find params[:id]
   end
 end
