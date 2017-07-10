@@ -1,0 +1,6 @@
+{
+  "name": "admin_lte_todo",
+  "dependencies": {
+    "admin-lte": "*"
+  }
+}

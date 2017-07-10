@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/galetahub/ckeditor.git
-  revision: 437501e2789dc764c58e57cad0897854c186fa82
+  revision: 752bca97f78e5c5df3fbd876e51a06918da804e2
   specs:
     ckeditor (4.2.4)
       cocaine
@@ -52,7 +52,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
-    autoprefixer-rails (7.1.1.2)
+    autoprefixer-rails (7.1.2.1)
       execjs
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
@@ -104,7 +104,7 @@ GEM
     equalizer (0.0.11)
     erubis (2.7.0)
     execjs (2.7.0)
-    faker (1.7.3)
+    faker (1.8.0)
       i18n (~> 0.5)
     ffi (1.9.18)
     font-awesome-rails (4.7.0.2)
@@ -113,12 +113,9 @@ GEM
       activerecord (>= 4.0.0)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
-    grape (0.19.2)
+    grape (1.0.0)
       activesupport
       builder
-      hashie (>= 2.1.0)
-      multi_json (>= 1.3.2)
-      multi_xml (>= 0.5.2)
       mustermann-grape (~> 1.0.0)
       rack (>= 1.3.0)
       rack-accept
@@ -126,8 +123,7 @@ GEM
     grape-active_model_serializers (1.5.1)
       active_model_serializers (>= 0.10.0)
       grape (>= 0.8.0)
-    hashie (3.5.5)
-    i18n (0.8.4)
+    i18n (0.8.6)
     ice_nine (0.11.2)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
@@ -149,11 +145,10 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
-    mini_magick (4.7.2)
+    mini_magick (4.8.0)
     mini_portile2 (2.2.0)
     minitest (5.10.2)
     multi_json (1.12.1)
-    multi_xml (0.6.0)
     mustermann (1.0.0)
     mustermann-grape (1.0.0)
       mustermann (~> 1.0.0)
@@ -211,7 +206,7 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
-    sass (3.4.24)
+    sass (3.4.25)
     sass-rails (5.0.6)
       railties (>= 4.0.0, < 6)
       sass (~> 3.1)
