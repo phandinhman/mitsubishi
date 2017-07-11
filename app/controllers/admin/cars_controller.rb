@@ -1,6 +1,8 @@
 class Admin::CarsController< AdminController
 	def index
-	  @cars = Car.all
+	  @cars = Car.paginate(page: params[:page], per_page: 10)
+    @user = User.all
+    @caegories = Category.all
   end
 
 	def new

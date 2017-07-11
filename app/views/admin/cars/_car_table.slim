@@ -1,0 +1,52 @@
+.row
+  .col-xs-12
+    .box
+      .box-header
+        span.pull-right
+          = t "title.choose_language"
+          = link_to new_admin_car_path do
+            i.fa.fa-plus-square style="margin-right: 3px;"
+            = t "button.add_game"
+      .box-body
+        - if cars.blank?
+          .dataTables_empty= t "messages.no_data"
+        - else
+          table#table-game.table.table-bordered.table-striped
+            thead
+              tr
+                th style="width: 150px"
+                - if check_ui == "system_games"
+                  th = t "game_attributes.owner"
+                th = t "game_attributes.description"
+                th style="width: 230px" 
+                th style="width: 140px" 
+            tbody
+              - cars.each do |car|
+                tr
+                  td
+                    = link_to admin_car_path(car) do
+                      span.ellipsis.ell_max_12 style="height: 30px; float: left; padding: 5px 0" = car.name
+                  - if check_ui == "system_games"
+                    td
+                      = 
+                      = 
+                  td.game-description
+                    
+                  td
+                    .progress
+                      .progress-bar.progress-bar-striped.active role="progressbar" aria-valuemin="0" ariavaluemax="100" style="width: 50"
+                        = car.cost
+                  td
+                    = 
+                  td
+                    span style="float:left; height: 40px; padding: 6px 0" = car.category.name
+            tfoot
+              tr
+                th = t "game_attributes.title"
+                - if check_ui == "system_games"
+                  th = t "game_attributes.owner"
+                th = t "game_attributes.description"
+                th = t "game_attributes.rate_gauge"
+                th = t("game_attributes.gauge_limit")
+                th = t "game_attributes.category"
+          = will_paginate cars, theme: 'twitter-bootstrap-3'
