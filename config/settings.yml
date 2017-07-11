@@ -19,7 +19,7 @@ http_code:
   code_401: 401
   content_401: "Unauthorized"
   code_403: 403
-tatus_codes:
+status_codes:
   connection_refused: 400
   server_error: 500
   error: 600
