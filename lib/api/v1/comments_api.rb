@@ -32,7 +32,7 @@ class API::V1::CommentsAPI < Grape::API
     end
 
     params do
-      requires ":id", type:Integer
+      requires :id, type:Integer
       requires :content, type:String
     end
     patch ":id" do
