@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root "home#index", path: "/"
 	  resources :cars
+    resources :categories
   end
   devise_for :users, controllers: {sessions: "sessions"}
   root "index#index"
