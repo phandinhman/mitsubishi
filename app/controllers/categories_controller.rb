@@ -1,11 +1,14 @@
 class CategoriesController < ApplicationController
-  load_and_authorize_resource find_by: :slug
+  before_action :load_cars_by_category, :load_categories, :load_category, only: [:index, :show]
+
+  def index
+  end
 
   def show
   end
 
   private
-  def load_car_by_category
+  def load_cars_by_category
     @cars = Category.friendly.find(params[:id]).cars
   end
 

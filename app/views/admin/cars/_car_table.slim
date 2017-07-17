@@ -14,30 +14,25 @@
           table#table-game.table.table-bordered.table-striped
             thead
               tr
-                th style="width: 150px"
-                - if check_ui == "system_games"
-                  th = t "game_attributes.owner"
-                th = t "game_attributes.description"
+                th = "Name"
+                th = "Description"
+                th = "Cost"
+                th = "Special Cost"
                 th style="width: 230px" 
+                  = "Category"
                 th style="width: 140px" 
             tbody
-              - cars.each do |car|
+              - cars&.each do |car|
                 tr
                   td
                     = link_to admin_car_path(car) do
                       span.ellipsis.ell_max_12 style="height: 30px; float: left; padding: 5px 0" = car.name
-                  - if check_ui == "system_games"
-                    td
-                      = 
-                      = 
-                  td.game-description
-                    
                   td
-                    .progress
-                      .progress-bar.progress-bar-striped.active role="progressbar" aria-valuemin="0" ariavaluemax="100" style="width: 50"
-                        = car.cost
+                    = car.body
                   td
-                    = 
+                    = car.cost
+                  td
+                    = car.special_cost
                   td
                     span style="float:left; height: 40px; padding: 6px 0" = car.category.name
             tfoot
