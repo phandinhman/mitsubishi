@@ -104,17 +104,11 @@
                            <li class="level0 nav-8 level-top parent ">
                               <a class="level-top" href="/collections/all"> <span>Sản phẩm</span> </a>
                               <ul class="level0">
-                                 <li class="level1 nav-2-1 first parent "> <a href="/xe-mitsubishi-moi"> <span>SẢN PHẨM MỚI</span> </a></li>
-                                 <li class="level1 nav-2-1 first parent "> <a href="/xe-o-to-mitsubishi-khuyen-mai"> <span>SẢN PHẨM KHUYẾN MẠI</span> </a></li>
-                                 <li class="level1 nav-2-1 first parent "> <a href="/san-pham-xe-mitsubishi-ban-chay"> <span>SẢN PHẨM BÁN CHẠY</span> </a></li>
-                                 <li class="level1 nav-2-1 first parent "> <a href="/attrage"> <span>ATTRAGE</span> </a></li>
-                                 <li class="level1 nav-2-1 first parent "> <a href="/mirage"> <span>MIRAGE</span> </a></li>
-                                 <li class="level1 nav-2-1 first parent "> <a href="/outlander"> <span>OUTLANDER</span> </a></li>
-                                 <li class="level1 nav-2-1 first parent "> <a href="/outlander-sport"> <span>OUTLANDER SPORT</span> </a></li>
-                                 <li class="level1 nav-2-1 first parent "> <a href="/pajero"> <span>PAJERO</span> </a></li>
-                                 <li class="level1 nav-2-1 first parent "> <a href="/pajero-sport"> <span>PAJERO SPORT</span> </a></li>
-                                 <li class="level1 nav-2-1 first parent "> <a href="/all-new-pajero-sport"> <span>ALL NEW PAJERO SPORT</span> </a></li>
-                                 <li class="level1 nav-2-1 first parent "> <a href="/triton"> <span>TRITON</span> </a></li>
+                                <% @categories&.each do |category| %>
+                                  <li class="level1 nav-2-1 first parent">
+                                    <%= link_to category.name, category_path(category) %>
+                                  </li>
+                                <% end %>
                               </ul>
                            </li>
                            <li class="level0 nav-8 level-top parent ">
@@ -157,17 +151,11 @@
                <a href="/collections/all"><span>Sản phẩm <i style="float: right;margin: 1px 5px;" class="fa fa-sort-desc"></i></span></a>
                <ul class="level1">
                   <i class="fa fa-sort-asc icon_arr"></i>
-                  <li class="level1 first parent "><a href="/xe-mitsubishi-moi"><span>SẢN PHẨM MỚI</span></a></li>
-                  <li class="level1 first parent "><a href="/xe-o-to-mitsubishi-khuyen-mai"><span>SẢN PHẨM KHUYẾN MẠI</span></a></li>
-                  <li class="level1 first parent "><a href="/san-pham-xe-mitsubishi-ban-chay"><span>SẢN PHẨM BÁN CHẠY</span></a></li>
-                  <li class="level1 first parent "><a href="/attrage"><span>ATTRAGE</span></a></li>
-                  <li class="level1 first parent "><a href="/mirage"><span>MIRAGE</span></a></li>
-                  <li class="level1 first parent "><a href="/outlander"><span>OUTLANDER</span></a></li>
-                  <li class="level1 first parent "><a href="/outlander-sport"><span>OUTLANDER SPORT</span></a></li>
-                  <li class="level1 first parent "><a href="/pajero"><span>PAJERO</span></a></li>
-                  <li class="level1 first parent "><a href="/pajero-sport"><span>PAJERO SPORT</span></a></li>
-                  <li class="level1 first parent "><a href="/all-new-pajero-sport"><span>ALL NEW PAJERO SPORT</span></a></li>
-                  <li class="level1 first parent "><a href="/triton"><span>TRITON</span></a></li>
+                  <% @categories&.each do |category| %>
+                    <li class="level1 nav-2-1 first parent">
+                      <%= link_to category.name, category_path(category) %>
+                    </li>
+                  <% end %>
                </ul>
             </li>
             <li class="level0 parent drop-menu ">
@@ -198,7 +186,9 @@
                   <li class="level1 first parent "><a href="/chuong-trinh-khuyen-mai-xe-mitsubishi"><span>Tin khuyến mại</span></a></li>
                </ul>
             </li>
-            <li class="level0 parent drop-menu "><a href="/lien-he"><span>Liên hệ</span></a></li>
+            <li class="level0 parent drop-menu ">
+              <%= link_to contacts_path, t(".contact") %>
+            </li>
          </ul>
       </div>
    </div>

@@ -1,10 +1,9 @@
-class AboutsController < ApplicationController
+class CostsController < ApplicationController
   before_action :load_categories, only: :index
-
   def index
   end
 
-  private 
+  private
   def load_categories
     @categories = Category.all
   end

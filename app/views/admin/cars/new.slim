@@ -1,3 +1,7 @@
 - provide :title, t(".title")
-div.container
-  = render "admin/cars/form", car: @car
+section.content
+  div.row
+    div.box-header.with-border
+      h3.box-title
+        | New Car
+      = render "admin/cars/form", car: @car, categories: @categories

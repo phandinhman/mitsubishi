@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   resources :categories
   resources :cars
   resources :abouts, path: "gioi-thieu"
+  resources :contacts, path: "lien-he"
+  resources :costs, path: "bang-gia"
 end

@@ -4,13 +4,31 @@
       li
         = message
 = form_for [:admin, @car] do |f|
-  div
-    = f.label :name
-  div
-    = f.text_field :name
-  div
-    = f.label :body
-  div
-    = f.cktext_area :body, rows: 100
-  div
-    = f.submit
+  div.box-body
+    div.form-group.col-md-6
+      = f.label :name
+      = f.text_field :name, class: "form-control"
+    div.form-group.col-md-6
+      = f.label :cost
+      = f.text_field :cost, class: "form-control"
+    div.form-group.col-md-6
+      = f.label :sepcial_cost
+      = f.text_field :special_cost, class: "form-control"
+    div.form-group.col-md-6
+      = f.label :version
+      = f.text_field :version, class: "form-control"
+    div.form-group.col-md-6
+      = f.label :width
+      = f.text_field :width, class: "form-control"
+    div.form-group.col-md-6
+      = f.label :height
+      = f.text_field :height, class: "form-control"
+    div.form-group.col-md-6
+      = f.label :length
+      = f.text_field :length, class: "form-control"
+    div.form-group.col-md-12
+      = f.label :file_input
+      = f.file_field :image
+    div.form-group.col-md-6
+      = f.select :category_id, options_for_select(categories.map{|s| [s.name, s.id]}), {}, class: "select-select2"
+  = f.submit
