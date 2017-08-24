@@ -1,0 +1,11 @@
+- provide :title, t(".title")
+section.content
+  div.row
+    div.box-header.with-border
+      h3.box-title
+        | New About
+      = form_for [:admin, @about] do |f|
+        div.box-body
+          = f.label :content
+          = f.cktext_area :content, class: "form-control"
+        = f.submit

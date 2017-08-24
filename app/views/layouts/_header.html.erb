@@ -180,14 +180,10 @@
                </ul>
             </li>
             <li class="level0 parent drop-menu ">
-               <a href="/tin-tuc"><span>Tin tức <i style="float: right;margin: 1px 5px;" class="fa fa-sort-desc"></i></span></a>
-               <ul class="level1">
-                  <i class="fa fa-sort-asc icon_arr"></i>
-                  <li class="level1 first parent "><a href="/chuong-trinh-khuyen-mai-xe-mitsubishi"><span>Tin khuyến mại</span></a></li>
-               </ul>
+              <%= link_to t(".discount"), discounts_path %>
             </li>
             <li class="level0 parent drop-menu ">
-              <%= link_to contacts_path, t(".contact") %>
+              <%= link_to t(".contact"), contacts_path %>
             </li>
          </ul>
       </div>
