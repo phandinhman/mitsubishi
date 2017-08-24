@@ -1,5 +1,5 @@
 class AboutsController < ApplicationController
-  before_action :load_categories, only: :index
+  before_action :load_categories, :load_about, only: :index
 
   def index
   end
@@ -7,5 +7,9 @@ class AboutsController < ApplicationController
   private 
   def load_categories
     @categories = Category.all
+  end
+
+  def load_about
+    @about = About.first
   end
 end

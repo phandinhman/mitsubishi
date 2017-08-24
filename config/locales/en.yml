@@ -26,3 +26,7 @@ en:
       title: "Mitsubishi"
       top_sale: "Bán chạy trong tuần"
       buy_car: "Mua hàng"
+  layouts:
+    header:
+      contact: Liên hệ
+      discount: Khuyến mãi
