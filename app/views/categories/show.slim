@@ -30,28 +30,7 @@ div.main-container.col2-left-layout
                 option value="alpha-asc" A-> Z
                 option value="alpha-asc" A-> Z
           ul.products-grid.hidden_btn_cart.multi-columns-row
-            - @cars.each do |car|
-              li.item.col-lg-4.col-md-4.col-sm-6.col-xs-6
-                div.col-item
-                  div.product-image-area
-                    a.product-image
-                      = image_tag car&.image unless car&.image.blank?
-                  div.hidden_mobile.hidden-sm.hidden-sx
-                  div.info
-                    div.info-inner
-                      div.item-title
-                        h3
-                          a title="ATTRAGE Số sàn MT" href="/mitsubishi-triton-4x2-mt" ATTRAGE Số sàn MT
-                      div.item-content
-                        div.price-box
-                          p.special-price
-                            span.price
-                              = car&.special_cost
-                          p.old-price
-                            span.price-sep
-                              = "-"
-                            span.price
-                              = car&.cost
+            = render @cars
           div.page
             div.pages
               ul.pagination

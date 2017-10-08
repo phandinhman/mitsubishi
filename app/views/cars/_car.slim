@@ -1,21 +1,40 @@
 div.col-lg-3.col-md-3.col-sm-6.col-xs-6.full_width480
   div.col-item
-    div.product-image-area
-      a.product-image
-        img src="//bizweb.dktcdn.net/thumb/large/100/176/403/products/triton-4x2at-39665ac4-083c-455f-b864-acf7dd16dc64-43cfb037-3e6c-4fd1-91f0-932a131efc69.png?v=1487582663927" class="img-responsive" alt="Mitsubishi Triton 1 cầu số sàn 4X2 MT"
-    div.hidden_mobile.hidden-sm.hidden-sx
+    .product-image-area
+      = link_to "#", class: "product-image" do
+        img.img-responsive alt="#{car.name}" src="//bizweb.dktcdn.net/thumb/large/100/176/403/products/triton-4x2at-39665ac4-083c-455f-b864-acf7dd16dc64-43cfb037-3e6c-4fd1-91f0-932a131efc69.png?v=1487582663927"
+    div.hidden_mobile.hidden-sm.hidden-xs
+      form#product-actions-5610288.variants
+        div.hover_fly
+          a.exclusive.ajax_add_to_cart_button.btn-cart.add_to_cart href="#" title=("Cho vào giỏ hàng") 
+            div
+              i.icon-shopping-cart
+              span
+                = "Mua hàng"
+          input name="variantId" type="hidden" value="8990289" /
+        = link_to car_path(car), class: "over_bg" do
     div.info
       div.info-inner
         div.item-title
           h3
-            = link_to car.name, car_path(car)
+            = link_to car_path(car), class: "product-image" do
+              = car.name
+        /! item-title
         div.item-content
           div.price-box
             p.special-price
               span.price
-                = car.special_cost
+                = number_to_currency car.special_cost, precision: 0, locale: :vi
             p.old-price
-              span.price-sep
-                = "-"
+              span.price-sep -
               span.price
-                = car.cost
+                = number_to_currency car.cost, precision: 0, locale: :vi
+        div.button_mobile.hidden-lg.hidden-md
+          form#product-actions-5610288.variants action="/cart/add" enctype="multipart/form-data" method="post" 
+            div.actions
+              input name="variantId" type="hidden" value="8990289" /
+              button.button.btn-cart.btn-cart.add_to_cart title=("Cho vào giỏ hàng") type="button" 
+                span Mua hàng
+        /! item-content
+      /! info-inner
+      div.clearfix
