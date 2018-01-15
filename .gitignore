@@ -27,3 +27,5 @@ config/settings.local.yml
 config/settings/*.local.yml
 config/environments/*.local.yml
 onfig/database.yml
+/config/database.production.yml
+/config/secrets.production.yml

@@ -44,7 +44,17 @@ group :development do
   gem "web-console", ">= 3.3.0"
   gem "listen", "~> 3.0.5"
   gem "spring"
-  gem "spring-watcher-listen", "~> 2.0.0"
+  gem "spring-watcher-listen"
+  gem "capistrano",  '3.5.0'
+  gem 'capistrano-rvm'
+  gem 'capistrano-nginx'
+  gem 'capistrano3-puma'
+  gem 'capistrano-rails'
+  gem 'capistrano-rails-db'
+  gem 'capistrano-rails-console'
+  gem 'capistrano-upload-config'
+  gem 'sshkit-sudo'
+
 end
 
 group :production do
