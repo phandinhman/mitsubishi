@@ -347,7 +347,7 @@ a.btn-button-st:hover{background:#292929;border:1px solid #292929;color:#fff}
 .offer-banner-section .col-lg-4 .overlay:before,.offer-banner-section .col-lg-4 .overlay:after{border:1px solid #fff;-webkit-transform:scale(0,1);transform:scale(0,1);position:absolute;top:30px;right:30px;bottom:30px;left:30px;content:'';opacity:0;-webkit-transition:opacity 0.35s,-webkit-transform .35s;transition:opacity 0.35s,transform .35s;top:10px;left:10px;right:10px;bottom:10px;opacity:1;-webkit-transform:scale(1);transform:scale(1);animation-delay:.3s;animation-name:fadeInUp}
 .offer-banner-section .col-lg-4 .overlay a.info{display:inline-block;text-decoration:none;padding:15px;background:#292929;color:#fff;font-family:'Open Sans',sans-serif;font-weight:700;font-size:16px;text-transform:uppercase;top:45%;position:relative;width:100%;font-weight:600;letter-spacing:1px}
 .offer-banner-section .col-lg-4 .overlay a.info:hover{background:#222}
-.toplinks .links div.bag_shop{background:url(//bizweb.dktcdn.net/100/176/403/themes/231146/assets/icon_bag.png?1494382781852) no-repeat;width:20px;height:20px;background-size:15px;cursor:pointer;margin-left:10px}
+.toplinks .links div.bag_shop{background:url("") no-repeat;width:20px;height:20px;background-size:15px;cursor:pointer;margin-left:10px}
 .toplinks .links div.bag_shop span.cart-total{position:absolute;top:0;right:6px;background:#e20000;border-radius:50px;width:18px;height:18px;text-align:center;color:#000;font-size:11px}
 .account-msg a{color:#fff;font-size:13px}
 .account-msg a:hover{color:#e20000;font-size:13px}
