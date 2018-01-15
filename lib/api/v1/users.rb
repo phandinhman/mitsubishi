@@ -1,6 +1,6 @@
 class API::V1::User < Grape::API
   resources :users do
-    des "Sign up"
+    desc "Sign up"
     params do
       requires :email, type: String, allow_blank: false
       requires :password, type: String
