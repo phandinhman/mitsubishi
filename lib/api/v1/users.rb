@@ -1,4 +1,4 @@
-class API::V1::User < Grape::API
+class API::V1::Users < Grape::API
   resources :users do
     desc "Sign up"
     params do
@@ -15,7 +15,7 @@ class API::V1::User < Grape::API
       user = User.find_by email: email
       return {status: 401, error_message: "Email is existed"} unless user
       user = User.create email: email, password: password, first_name: first_name, last_name: last_name
-      {status: 200, token: JsonWebToken.encode({user_id: user.id, email: user.email})
+      {status: 200, token: JsonWebToken.encode({user_id: user.id, email: user.email})}
     end
   end
 end
