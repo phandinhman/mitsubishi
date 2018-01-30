@@ -4,7 +4,7 @@ class AboutsController < ApplicationController
   def index
   end
 
-  private 
+  private
   def load_categories
     @categories = Category.all
   end

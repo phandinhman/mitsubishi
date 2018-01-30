@@ -99,8 +99,10 @@
                   <ul class="submenu">
                      <li>
                         <ul class="topnav">
-                           <li class="level0 nacvv-8 level-top parent  active "> <a class="level-top" href="/"> <span>Trang chủ</span> </a></li>
-                           <li class="level0 nacvv-8 level-top parent "> <a class="level-top" href="/gioi-thieu"> <span>Giới thiệu</span> </a></li>
+                           <li class="level0 nacvv-8 level-top parent"> <a class="level-top" href="/"> <span>Trang chủ</span> </a></li>
+                           <li class="level0 nacvv-8 level-top parent">
+                             <a class="level-top" href="/gioi-thieu"> <span>Giới thiệu</span> </a>
+                          </li>
                            <li class="level0 nav-8 level-top parent ">
                               <a class="level-top" href="/collections/all"> <span>Sản phẩm</span> </a>
                               <ul class="level0">
@@ -136,9 +138,9 @@
             <!--navmenu-->
          </div>
          <ul id="nav" class="hidden-xs">
-            <li class="level0 parent drop-menu  active "><a href="/"><span>Trang chủ</span></a></li>
-            <li class="level0 parent drop-menu "><a href="/gioi-thieu"><span>Giới thiệu</span></a></li>
-            <li class="level0 parent drop-menu ">
+            <li class="level0 parent drop-menu <%= active_class('/') =%>"><a href="/"><span>Trang chủ</span></a></li>
+            <li class="level0 parent drop-menu <%= active_class(abouts_path) =%>"><a href="/gioi-thieu"><span>Giới thiệu</span></a></li>
+            <li class="level0 parent drop-menu">
                <a href="/collections/all"><span>Sản phẩm <i style="float: right;margin: 1px 5px;" class="fa fa-sort-desc"></i></span></a>
                <ul class="level1">
                   <i class="fa fa-sort-asc icon_arr"></i>
