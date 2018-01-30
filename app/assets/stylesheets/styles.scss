@@ -2158,3 +2158,17 @@ p.sl-txt {
     letter-spacing: 4px;
     text-align: center;
 }
+
+// --------------add style box facebook, google map-------------
+
+.facebook-box{
+	text-align: center;
+}
+
+.google-map{
+	width: 100%;
+	min-height: 320px;
+}
+// ----------import reponsive file---------------
+
+@import 'reponsive.scss';

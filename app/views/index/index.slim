@@ -56,8 +56,13 @@ section.featured-pro.bg_spc
 								div.clearfix
 section.fanpage-map.container
 	div.row
-		div.col-md-4.clo-sm-5.col-xs-12
-			div.fv-page
-				data-href="https://www.facebook.com/tvluc130"
-		div.col-md-8.col-sm-7.col-xs-12
-			iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDpI6MhVnUxiwuByje6j8_1sv-WZikpe6I&q=Space+Needle,Seattle+WA" allowfullscreen width="100%" height="300" frameborder="0" style="border:0" allowfullscreen
+		div.col-md-4.clo-sm-12.col-xs-12.facebook-box
+		  div#fb-root
+			script
+			    | (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.11'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));
+		  div.fb-page[data-href="https://www.facebook.com/tvluc130" data-height="300px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"]
+			  blockquote.fb-xfbml-parse-ignore[cite="https://www.facebook.com/tvluc130"]
+				  a[href="https://www.facebook.com/tvluc130"]
+					  | Thế giới Mitsubishi
+		div.col-md-8.col-sm-12.col-xs-12
+			iframe class="google-map" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDpI6MhVnUxiwuByje6j8_1sv-WZikpe6I&q=Space+Needle,Seattle+WA" allowfullscreen width="100%" height="300" frameborder="0" style="border:0" allowfullscreen

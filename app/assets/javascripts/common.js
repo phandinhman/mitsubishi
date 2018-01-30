@@ -6,7 +6,7 @@ function slideEffectAjax() {
         jQuery(this).find(".top-cart-content").stop(true, true).slideUp()
     })
 }
-	
+
 jQuery(document).ready(function() {
         "use strict";
 		/* menu */
@@ -41,7 +41,7 @@ jQuery(document).ready(function() {
             }
         }).mouseleave(function() {
             jQuery(window).width() >= 740 && jQuery(this).children("ul").fadeOut(100)
-        }), 
+        }),
 
 		/* coverage-slider */
 		jQuery("#coverage-slider").owlCarousel({
@@ -75,26 +75,26 @@ jQuery(document).ready(function() {
             itemsDesktop: [1024, 4],
             itemsDesktopSmall: [900, 3],
             itemsTablet: [600, 2],
-            itemsMobile: [414, 1],
+            itemsMobile: [480, 1],
             navigation: !0,
             navigationText: ['<a class="flex-prev"></a>', '<a class="flex-next"></a>'],
             slideSpeed: 500,
 			autoHeight: true,
             pagination: !1
-        }), 
+        }),
 		/* bag-seller-slider */
-		jQuery("#bag-seller-slider .slider-items").owlCarousel({
-            items: 1,
-            itemsDesktop: [1024, 1],
-            itemsDesktopSmall: [900, 1],
-            itemsTablet: [600, 1],
-            itemsMobile: [320, 1],
-            navigation: !0,
-            navigationText: ['<a class="flex-prev"></a>', '<a class="flex-next"></a>'],
-            slideSpeed: 500,
-			autoHeight: true,
-            pagination: !1
-        }), 
+		// jQuery("#bag-seller-slider .slider-items").owlCarousel({
+    //         items: 1,
+    //         itemsDesktop: [1024, 1],
+    //         itemsDesktopSmall: [900, 1],
+    //         itemsTablet: [600, 1],
+    //         itemsMobile: [320, 1],
+    //         navigation: !0,
+    //         navigationText: ['<a class="flex-prev"></a>', '<a class="flex-next"></a>'],
+    //         slideSpeed: 500,
+		// 	autoHeight: true,
+    //         pagination: !1
+    //     }),
 		/* shoes-slider */
 		jQuery("#shoes-slider .slider-items").owlCarousel({
             items: 1,
@@ -107,7 +107,7 @@ jQuery(document).ready(function() {
             slideSpeed: 500,
 			autoHeight: true,
             pagination: !1
-        }), 
+        }),
 		/* recommend-slider */
 		jQuery("#recommend-slider .slider-items").owlCarousel({
             items: 1,
@@ -146,7 +146,7 @@ jQuery(document).ready(function() {
             navigationText: ['<a class="flex-prev"></a>', '<a class="flex-next"></a>'],
             slideSpeed: 500,
             pagination: !1
-        }), 
+        }),
 		/* category-desc-slider */
 		jQuery("#category-desc-slider .slider-items").owlCarousel({
             autoplay: !0,
@@ -159,45 +159,7 @@ jQuery(document).ready(function() {
             navigationText: ['<a class="flex-prev"></a>', '<a class="flex-next"></a>'],
             slideSpeed: 500,
             pagination: !1
-        }), 
-		/* more-views-slider */
-		jQuery("#more-views-slider .slider-items").owlCarousel({
-            autoplay: !0,
-            items: 3,
-            itemsDesktop: [1024, 4],
-            itemsDesktopSmall: [900, 3],
-            itemsTablet: [600, 2],
-            itemsMobile: [320, 1],
-            navigation: !0,
-            navigationText: ['<a class="flex-prev"></a>', '<a class="flex-next"></a>'],
-            slideSpeed: 500,
-            pagination: !1
-        }), 
-		
-		/* related-products-slider */
-		jQuery("#related-products-slider .slider-items").owlCarousel({
-            items: 4,
-            itemsDesktop: [1024, 4],
-            itemsDesktopSmall: [900, 3],
-            itemsTablet: [600, 2],
-            itemsMobile: [320, 1],
-            navigation: !0,
-            navigationText: ['<a class="flex-prev"></a>', '<a class="flex-next"></a>'],
-            slideSpeed: 500,
-            pagination: !1
-        }), 
-		/* upsell-products-slider */
-		jQuery("#upsell-products-slider .slider-items").owlCarousel({
-            items: 4,
-            itemsDesktop: [1024, 4],
-            itemsDesktopSmall: [991, 3],
-            itemsTablet: [600, 2],
-            itemsMobile: [320, 1],
-            navigation: !0,
-            navigationText: ['<a class="flex-prev"></a>', '<a class="flex-next"></a>'],
-            slideSpeed: 500,
-            pagination: !1
-        }), 
+        }),
 		/* more-views-slider */
 		jQuery("#more-views-slider .slider-items").owlCarousel({
             autoplay: !0,
@@ -211,7 +173,45 @@ jQuery(document).ready(function() {
             slideSpeed: 500,
             pagination: !1
         }),
-/*To top*/		
+
+		/* related-products-slider */
+		jQuery("#related-products-slider .slider-items").owlCarousel({
+            items: 4,
+            itemsDesktop: [1024, 4],
+            itemsDesktopSmall: [900, 3],
+            itemsTablet: [600, 2],
+            itemsMobile: [320, 1],
+            navigation: !0,
+            navigationText: ['<a class="flex-prev"></a>', '<a class="flex-next"></a>'],
+            slideSpeed: 500,
+            pagination: !1
+        }),
+		/* upsell-products-slider */
+		jQuery("#upsell-products-slider .slider-items").owlCarousel({
+            items: 4,
+            itemsDesktop: [1024, 4],
+            itemsDesktopSmall: [991, 3],
+            itemsTablet: [600, 2],
+            itemsMobile: [320, 1],
+            navigation: !0,
+            navigationText: ['<a class="flex-prev"></a>', '<a class="flex-next"></a>'],
+            slideSpeed: 500,
+            pagination: !1
+        }),
+		/* more-views-slider */
+		jQuery("#more-views-slider .slider-items").owlCarousel({
+            autoplay: !0,
+            items: 3,
+            itemsDesktop: [1024, 4],
+            itemsDesktopSmall: [900, 3],
+            itemsTablet: [600, 2],
+            itemsMobile: [320, 1],
+            navigation: !0,
+            navigationText: ['<a class="flex-prev"></a>', '<a class="flex-next"></a>'],
+            slideSpeed: 500,
+            pagination: !1
+        }),
+/*To top*/
 		 jQuery(document).ready(function() {
             jQuery(".subDropdown")[0] && jQuery(".subDropdown").click(function() {
                 jQuery(this).toggleClass("plus"), jQuery(this).toggleClass("minus"), jQuery(this).parent().find("ul").slideToggle()
